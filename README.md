@@ -36,4 +36,4 @@ A modern, responsive dashboard built with **ShadCN UI**, **Tailwind CSS**, and *
 
 ---
 
-This project serves as a foundation for creating fully-featured dashboards with reusable components and modern UI practices.
+
