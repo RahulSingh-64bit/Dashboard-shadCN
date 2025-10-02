@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import { Calendar, ChevronUp, Home, Inbox, Search, Settings, User2 } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -10,8 +10,11 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarSeparator,
 } from "./ui/sidebar";
 import Link from "next/link";
+import Image from "next/image";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
 
 const items = [
   {
@@ -43,18 +46,20 @@ const items = [
 
 const AppSideBar = () => {
   return (
-    <Sidebar>
+    <Sidebar collapsible="icon">
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuButton>
             <SidebarMenuButton asChild>
               <Link href="/">
-              
+              <Image src="/logo.svg" alt="logo" width={20} height={20} />
+              <span>Rahul Dev</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuButton>
         </SidebarMenu>
       </SidebarHeader>
+      <SidebarSeparator/>
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>
@@ -73,7 +78,26 @@ const AppSideBar = () => {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter></SidebarFooter>
+      <SidebarFooter>
+        <SidebarGroupContent>
+          <SidebarMenu>
+            <SidebarMenuItem>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild> 
+                  <SidebarMenuButton>
+                    <User2/> Rahul Singh <ChevronUp className=" ml-auto"/>
+                  </SidebarMenuButton>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuItem>Account</DropdownMenuItem>
+                  <DropdownMenuItem>Settings</DropdownMenuItem>
+                  <DropdownMenuItem>Sign out</DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </SidebarMenuItem>
+          </SidebarMenu>
+        </SidebarGroupContent>
+      </SidebarFooter>
     </Sidebar>
   );
 };
