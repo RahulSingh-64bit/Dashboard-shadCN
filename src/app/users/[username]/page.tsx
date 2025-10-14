@@ -21,6 +21,8 @@ import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import EditUser from "@/components/EditUser";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import AppLineChart from "@/components/AppLineChart";
 
 const SingleUserPage = () => {
   return (
@@ -160,9 +162,23 @@ const SingleUserPage = () => {
         {/* Right */}
         <div className="w-full xl:w-2/3 space-y-6">
           {/* User Card container */}
-          <div className="bg-primary-foreground p-4 rounded-lg">User Card</div>
+          <div className="bg-primary-foreground p-4 rounded-lg space-y-2">
+            <div className="flex items-center gap-2">
+              <Avatar className="size-12">
+                <AvatarImage src="https://images.unsplash.com/photo-1728577740843-5f29c7586afe?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                <AvatarFallback>JD</AvatarFallback>
+              </Avatar>
+              <h1 className="text-xl font-semibold">John Doe</h1>
+            </div>
+            <div className="text-sm text-muted-foreground">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quidem ut aliquam pariatur provident, totam aspernatur consequatur accusantium odio eveniet impedit maiores modi sit, adipisci quisquam repellendus dolore nemo itaque.</p>
+            </div>
+          </div>
           {/* Chart container */}
-          <div className="bg-primary-foreground p-4 rounded-lg">Chart</div>
+          <div className="bg-primary-foreground p-4 rounded-lg">
+            <h1 className="text-xl font-semibold">User Activity</h1>
+            <AppLineChart/>
+          </div>
         </div>
       </div>
     </div>
