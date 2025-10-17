@@ -31,7 +31,6 @@ export function DataTable<TData, TValue>({
     getCoreRowModel: getCoreRowModel(),
   })
 
-  console.log(table)
 
   return (
     <div className="overflow-hidden rounded-md border">
