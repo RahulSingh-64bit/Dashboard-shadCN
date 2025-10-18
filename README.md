@@ -1,5 +1,8 @@
 # Dashboard-shadCN (LIVE)
 
+>https://dashboard-shad-cn-psi.vercel.app/users/johndoe
+>https://dashboard-shad-cn-psi.vercel.app/payments
+
 A modern, responsive dashboard built with **ShadCN UI**, **Tailwind CSS**, and **React**. This project demonstrates UI components, data visualization, forms, and advanced table implementations for building scalable admin dashboards.
 
 ---
